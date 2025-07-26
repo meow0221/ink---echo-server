@@ -15,6 +15,23 @@ app.get('/', (req, res) => {
   res.send('Hello from Ink & Echo server!');
 });
 
+app.get('/api/posts', (req, res) => {
+  const dummyPosts = [
+    {
+      id: 1,
+      title: 'Welcome to My Blog',
+      content: 'This is your first blog post!'
+    },
+    {
+      id: 2,
+      title: 'Another Post',
+      content: 'This is some more content.'
+    }
+  ];
+
+  res.json(dummyPosts);
+});
+
 // Your API routes (optional if added)
 // app.use('/api/posts', require('./routes/postRoutes'));
 
